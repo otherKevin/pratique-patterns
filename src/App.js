@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import RootPage from "./pages/RootPage";
+import CallbackPage from "./pages/CallbackPage";
+import WrappedComponents1 from "./pages/WrappedComponents1";
+import RefsPage from "./pages/RefsPage";
+import TimerPage from "./pages/TimerPage";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<RootPage />} />
+          <Route path="/callback-props" element={<CallbackPage />} />
+          <Route path="/wrap-one" element={<WrappedComponents1 />} />
+          <Route path="/refs" element={<RefsPage />} />
+          <Route path="/timer" element={<TimerPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

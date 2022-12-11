@@ -1,0 +1,23 @@
+**** Callback props :
+
+ü Créez un composant contenant un formulaire de paiement permettant de saisir un numéro de CB, une date
+d’expiration et un cryptogramme. Chaque input devra pouvoir être contrôlé par le composant parent.
+
+ü Appelez ce composant dans un composant parent contenant les variables d’état et fonctions nécessaires.
+
+ü BONUS : Ajoutez une fonction « intermédiaire » empêchant la saisie de plus de 12 chiffres dans le numéro de
+CB. Cette fonction doit être déclarée et utilisée dans le composant formulaire de paiement.
+
+********************************************************************************************************************
+
+**** Props de rendu :
+
+ü Créez un composant GeocodingView prenant en props :
+    o une fonction de rendu, recevant en paramètres un objet contenant une longitude et une latitude
+    o un adresse postale en chaine de caractère
+
+ü Ce composant devra effectuer une requête vers l’API geocoding du gouvernement
+https://adresse.data.gouv.fr/api-doc/adresse et appeler sa prop de rendu en lui passant en argument la
+longitude et la latitude trouvée.
+
+ü Testez ce composant en l’appelant dans un composant parent en lui passant les props appropriées.
